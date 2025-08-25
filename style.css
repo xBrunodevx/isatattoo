@@ -1,0 +1,270 @@
+/* =====================
+   VARIÁVEIS E RESET
+===================== */
+:root {
+  /* Paleta Principal - Estilo Dark */
+  --cor-fundo: #121212; /* Fundo principal preto escuro */
+  --cor-fundo-secundario: #1e1e1e; /* Fundo para card/rodapé */
+  --cor-texto-principal: #f0f0f0; /* Branco suave para títulos */
+  --cor-texto-secundario: #b0b0b0; /* Cinza claro para parágrafos */
+  --cor-borda: #333333; /* Cinza escuro para bordas sutis */
+  --cor-destaque: #FF0000; /* Cor de destaque vibrante (magenta/rosa) */
+  
+  /* Sombra */
+  --sombra-padrao: 0 4px 15px rgba(0, 0, 0, 0.4);
+  
+  /* Fonte */
+  --fonte-principal: 'Poppins', sans-serif;
+  }
+  
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  body {
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-secundario);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  }
+  
+  img {
+  max-width: 100%;
+  display: block;
+  }
+
+  h1, h2, h3 {
+  color: var(--cor-texto-principal);
+  margin-bottom: 20px;
+  }
+  
+  section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  }
+  
+  section h2 {
+  text-align: center;
+  }
+  
+  /* =============================================
+     CONFIGURAÇÃO DE PARTÍCULAS (Se for manter)
+  ============================================= */
+  #particles-js, #particles-fazemos {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  }
+  
+  
+  .hero, .sobre {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  }
+  
+  .card, .sobre p, .sobre h2 {
+  position: relative;
+  z-index: 1; 
+  }
+  
+  /* =============================================
+     HEADER - CARD PRINCIPAL
+  ============================================= */ 
+  
+  .card {
+  display: inline-block;
+  text-align: center;
+  background: var(--cor-fundo-secundario); /* Fundo do card mais escuro */
+  border: 1px solid var(--cor-borda);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--sombra-padrao);
+  max-width: 400px;
+  margin-top: 20px;
+  }
+
+  .profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--cor-destaque);
+  margin: 0 auto 30px auto;
+  box-shadow: none;
+  }
+  
+  .card p {
+  color: var(--cor-texto-secundario);
+  }
+  
+  .social-links a {
+  margin: 0 10px;
+  color: var(--cor-texto-principal); /* Ícones sociais brancos */
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s;
+  }
+  
+  .social-links a:hover {
+  color: var(--cor-destaque);
+  transform: scale(1.2);
+  }
+  
+  /* =============================================
+     SOBRE MIM
+  ============================================= */
+  .sobre {
+  text-align: center;
+  }
+  
+  .sobre p {
+  color: var(--cor-texto-secundario);
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  }
+  
+
+  /* =============================================
+     PROJETOS
+  ============================================= */
+  .projetos {
+  text-align: center;
+  }
+  
+  .projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  }
+  
+  .card-projeto {
+  background: var(--cor-fundo-secundario);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--sombra-padrao);
+  transition: transform 0.3s;
+  }
+  
+  .card-projeto:hover {
+  transform: translateY(-5px);
+  }
+  
+  .card-projeto p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: 10px;
+  }
+  
+  .card-projeto .links a {
+  display: inline-block;
+  background: var(--cor-destaque);
+  color: var(--cor-fundo);
+  padding: 8px 12px;
+  margin: 5px 10px 0 0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  }
+  
+  .card-projeto .links a:hover {
+  background: var(--cor-fundo-secundario);
+  color: var(--cor-destaque);
+  } 
+  
+  /* =============================================
+     RODAPÉ
+  ============================================= */
+  footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: var(--cor-fundo-secundario);
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--cor-borda);
+  }
+  
+  /* =============================================
+     RESPONSIVIDADE
+  ============================================= */
+  @media (max-width: 600px) {
+  .card {
+  width: 100%;
+  padding: 20px;
+  }
+  
+  .grid-skills {
+  gap: 20px;
+  }
+  
+  .projetos-grid {
+  grid-template-columns: 1fr;
+  }
+  }
+  
+  /* =============================================
+     PORTFÓLIO SLIDER
+  ============================================= */
+  .portfolio {
+  text-align: center;
+  }
+  
+  .slider-container {
+  max-width: 400px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--sombra-padrao);
+  }
+  
+  .slider-track {
+  display: flex;
+  width: 500%;
+  animation: slide-animation 15s linear infinite;
+  }
+  
+  .slide {
+    width: 20%;
+    flex-shrink: 0;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  @keyframes slide-animation {
+    0% { transform: translateX(0%); }
+    15% { transform: translateX(0%); }
+  
+    20% { transform: translateX(-20%); }
+    35% { transform: translateX(-20%); }
+  
+    40% { transform: translateX(-40%); }
+    55% { transform: translateX(-40%); }
+  
+    60% { transform: translateX(-60%); }
+    75% { transform: translateX(-60%); }
+   
+    80% { transform: translateX(-80%); } 
+    100% { transform: translateX(-80%); }
+  }
+  
+  .slider-container:hover .slider-track {
+  animation-play-state: paused;
+  }
